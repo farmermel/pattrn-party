@@ -1,3 +1,8 @@
+body,
+h1 {
+  margin: 0;
+}
+
 hr {
   display: inline-block;
   width: 68%;
@@ -8,7 +13,55 @@ button {
   color: #f2f2f2;
 }
 
+header {
+  padding: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f2235;
+  color: #f2f2f2;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#party-header {
+  color: #34d1d1;
+}
+
 .section-header {
   display: inline-block;
   width: 27%;
+}
+
+.section-wrap {
+  width: 85%;
+}
+
+#tab-wrap {
+  display: flex;
+  position: relative;
+  padding: 10px 10px 240px 10px;
+}
+
+#tab-1,
+#tab-2,
+#tab-3,
+#tab-4 {
+  background-color: white;
+  width: 25%;
+}
+
+#drop-tab {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  border: 1px solid #666;
+}
+
+div#active {
+  background-color: magenta;
 }
