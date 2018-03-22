@@ -1,16 +1,28 @@
 body,
 h1 {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 hr {
+  border: 0;
+  border-top: 1px solid #d1d2d3;
+  margin: 1em 20px;
+  padding: 0; 
   display: inline-block;
+  background-color: #d1d2d3;
   width: 68%;
+  height: 1px;
 }
 
 button {
+  margin: auto;
+  display: block;
   background-color: #3f3244;
   color: #f2f2f2;
+  font-size: 1em;
+  height: 51px;
+  width: 290px;
 }
 
 header {
@@ -32,36 +44,63 @@ main {
   color: #34d1d1;
 }
 
+.section-header-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .section-header {
+  margin: 50px 20px;
   display: inline-block;
-  width: 27%;
+  width: fit-content;
 }
 
 .section-wrap {
   width: 85%;
 }
 
+.section-wrap hr {
+  margin: 10px 0 15px 0;
+  width: 100%;
+}
+
 #tab-wrap {
   display: flex;
   position: relative;
-  padding: 10px 10px 240px 10px;
+  padding: 10px 0 340px;
 }
 
-#tab-1,
-#tab-2,
-#tab-3,
-#tab-4 {
-  background-color: white;
+.tab-1,
+.tab-2,
+.tab-3,
+.tab-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  height: 50px;
   width: 25%;
 }
 
 #drop-tab {
+  border: 1px solid #d1d2d3;
+  padding: 30px;
   position: absolute;
-  top: 35px;
+  top: 59px;
   left: 0;
-  border: 1px solid #666;
+  display: flex;
+}
+
+.tab-plcholder-img {
+  margin: 0 45px 0 0;
+  height: 200px;
+  width: 200px;
 }
 
 div#active {
-  background-color: magenta;
+  border: 1px solid #d1d2d3;
+  border-bottom: none;
+  background-color: #fff;
 }
