@@ -1,7 +1,12 @@
-body,
-h1 {
+body {
   margin: 0;
+  padding: 0 0 70px 0;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.3em;
 }
 
 hr {
@@ -15,9 +20,12 @@ hr {
   height: 1px;
 }
 
-button {
+a {
   margin: auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background-color: #3f3244;
   color: #f2f2f2;
   font-size: 1em;
@@ -54,6 +62,8 @@ main {
 .section-header {
   margin: 50px 20px;
   display: inline-block;
+  font-weight: 300;
+  font-size: 1.5em;
   width: fit-content;
 }
 
@@ -69,13 +79,15 @@ main {
 #tab-wrap {
   display: flex;
   position: relative;
-  padding: 10px 0 340px;
+  padding: 10px 0 440px;
 }
 
 .tab-1,
 .tab-2,
 .tab-3,
 .tab-4 {
+  border: 1px solid white;
+  border-bottom: 1px solid #d1d2d3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,6 +98,7 @@ main {
 
 #drop-tab {
   border: 1px solid #d1d2d3;
+  border-top: none;
   padding: 30px;
   position: absolute;
   top: 59px;
@@ -95,8 +108,8 @@ main {
 
 .tab-plcholder-img {
   margin: 0 45px 0 0;
-  height: 200px;
-  width: 200px;
+  height: 320px;
+  width: 290px;
 }
 
 div#active {
