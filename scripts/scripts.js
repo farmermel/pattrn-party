@@ -4,7 +4,7 @@ const toggleTabs = (e) => {
   const tabClass = $(e.target).attr('class') || $('div #active').attr('class');
   $('div #active').removeAttr('id', 'active');
   $(`.${tabClass}`).attr('id', 'active');
-  $(`.${tabClass}`).append(`
+  $(`.${tabClass}`).after(`
     <article id='drop-tab'>
       <img class='tab-plcholder-img' src='assets/placeholder.png' alt='placeholder image' />
       <div>
