@@ -42,6 +42,14 @@ header {
   color: #f2f2f2;
 }
 
+header h1 {
+  font-weight: 300;
+}
+
+header hr {
+  display: none;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -79,7 +87,7 @@ main {
 #tab-wrap {
   display: flex;
   position: relative;
-  padding: 10px 0 440px;
+  padding: 8px 0 440px;
 }
 
 .tab-1,
@@ -101,7 +109,7 @@ main {
   border-top: none;
   padding: 30px;
   position: absolute;
-  top: 59px;
+  top: 61px;
   left: 0;
   display: flex;
 }
@@ -109,11 +117,90 @@ main {
 .tab-plcholder-img {
   margin: 0 45px 0 0;
   height: 320px;
-  width: 290px;
+  width: 40%;
 }
 
 div#active {
   border: 1px solid #d1d2d3;
   border-bottom: none;
   background-color: #fff;
+}
+
+.expand-tab-icon,
+.collapse-tab-icon {
+  display: none;
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 1035px) {
+  #tab-wrap {
+    padding: 10px 0 480px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header hr {
+    border-top: none;
+    display: block;
+    background-color: #666;
+    width: 18%;
+  }
+
+  #tab-wrap {
+    border: solid 1px#d1d2d3;
+    margin: 10px 0 50px;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .expand-tab-icon {
+    display: inline-block;
+  }
+
+  .tab-plcholder-img {
+    width: 100%;
+  }
+
+  #drop-tab {
+    border: none;
+    padding: 0;
+    display: initial;
+    position: unset;
+  }
+
+  #drop-tab div {
+    padding: 30px;
+  }
+
+  .tab-1,
+  .tab-2,
+  .tab-3,
+  .tab-4 {
+    border-bottom: none;
+    box-sizing: border-box;
+    margin: 1px auto;
+    padding: 0 28px;
+    justify-content: space-between;
+    font-size: 1.4em;
+    height: 60px;
+    width: 99%;
+  }
+
+  div#active {
+    border: none;
+  }
+
+  div#active .expand-tab-icon {
+    display: none;
+  }
+
+  div#active .collapse-tab-icon {
+    display: inline-block;
+  }
 }
