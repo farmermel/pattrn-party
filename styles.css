@@ -133,9 +133,132 @@ div#active {
   width: 20px;
 }
 
+/*Flexible cards*/
+
+.flex-cards-wrap {
+  margin: 0 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-card {
+  border: 1px solid #d1d2d3;
+  margin: 1%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  min-width: 225px;
+}
+
+.flex-card-header {
+  border-bottom: 1px solid #d1d2d3;
+  padding: 0px 14px;
+} 
+
+.flex-card-header h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex-image {
+  height: 350px;
+  width: 100%;
+}
+
+.flex-card.double-width {
+  flex-basis: 62%;
+  flex-grow: 2;
+}
+
+/*Header bar*/
+
+.header-bar {
+  margin: 0 0 50px 0;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #D1D2D3;
+}
+
+.dropdown-menu-label {
+  display: none;
+}
+
+.header-dropdown-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.header-bar h1 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.header-bar input {
+  border: 1px solid #666;
+  background-color: #F2F2F2;
+  background-image: url("./assets/search.svg");
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position-y: center;
+  background-position-x: 6px;
+  font-size: 1em;
+  font-weight: 300;
+  height: 35px;
+  text-indent: 40px;
+  width: 24%;
+}
+
+.nav-image {
+  border: 1px solid #666;
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+
 @media screen and (max-width: 1035px) {
   #tab-wrap {
     padding: 10px 0 480px;
+  }
+
+  /*header bar*/
+
+  .header-bar {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 0 270px 0;
+  }
+
+  .header-bar h1 {
+    font-size: 1.6em;
+    margin: 14px;
+  }
+
+  .header-bar input {
+    height: 45px;
+    width: 100%;
+  }
+
+  .dropdown-menu-label {
+    display: initial;
+  }
+
+  .header-dropdown-wrap {
+    display: none;
+  }
+
+  .header-dropdown-wrap.show-menu {
+    box-sizing: border-box;
+    display: initial;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    top: 112px;
+    padding: 13px;
   }
 }
 
@@ -203,4 +326,6 @@ div#active {
   div#active .collapse-tab-icon {
     display: inline-block;
   }
+
+
 }
