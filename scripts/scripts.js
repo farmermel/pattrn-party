@@ -1,10 +1,10 @@
 
-const toggleTabs = (e) => {
+const toggleTabs = e => {
   $('#drop-tab').remove();
   const tabClass = $(e.target).attr('class') || $('div #active').attr('class');
   $('div #active').removeAttr('id', 'active');
   $(`.${tabClass}`).attr('id', 'active');
-  $(`.${tabClass}`).append(`
+  $(`.${tabClass}`).after(`
     <article id='drop-tab'>
       <img class='tab-plcholder-img' src='assets/placeholder.png' alt='placeholder image' />
       <div>
@@ -17,4 +17,10 @@ const toggleTabs = (e) => {
   `)
 }
 
-$('#tab-wrap').on('click', toggleTabs)
+$('#tab-wrap').on('click', toggleTabs);
+
+const toggleMenu = e => {
+  $('.header-dropdown-wrap').toggleClass('show-menu');
+}
+
+$('.dropdown-menu-label').on('click', toggleMenu);
